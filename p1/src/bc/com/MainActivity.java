@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.android.internal.telephony.gsm.GsmCallTracker;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -65,7 +64,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.main_3);
 
         AssetManager asset = getAssets();
-        Log.d("aa", "asset count is " + asset.getGlobalAssetCount());
+//        Log.d("aa", "asset count is " + asset.getGlobalAssetCount());
         
         try {
             String[] s = asset.list("image");
@@ -93,7 +92,7 @@ public class MainActivity extends BaseActivity {
             listItemState = new boolean[listView.getCount()];
         }
 
-        this.getResources().openRawResourceFd(com.android.internal.R.raw.fallbackring);
+//        this.getResources().openRawResourceFd(com.android.internal.R.raw.fallbackring);
 //        Uri uri = Settings.System.DEFAULT_RINGTONE_URI;
 //        Ringtone r = RingtoneManager.getRingtone(this, uri);
         
@@ -393,16 +392,16 @@ public class MainActivity extends BaseActivity {
             accessNextPage(intent);
             break;
         case MsgIds.SLIDINGTAB_ID:
-            intent = new Intent(MainActivity.this, Sliding1.class);
-            accessNextPage(intent);
+//            intent = new Intent(MainActivity.this, Sliding1.class);
+//            accessNextPage(intent);
             break;
         case MsgIds.PREFERENCE_ID:
             intent = new Intent(MainActivity.this, Prefence1.class);
             accessNextPage(intent);
             break;
         case MsgIds.WALL_PAPER_ID:
-            intent = new Intent(MainActivity.this, WallPaper1.class);
-            accessNextPage(intent);
+//            intent = new Intent(MainActivity.this, WallPaper1.class);
+//            accessNextPage(intent);
             break;
         case MsgIds.COLOR_ID:
             intent = new Intent(MainActivity.this, Colorsa.class);
@@ -437,8 +436,8 @@ public class MainActivity extends BaseActivity {
             accessNextPage(intent);
             break;
         case MsgIds.TELEPHONE_ID:
-            intent = new Intent(MainActivity.this, TelephoneInject.class);
-            accessNextPage(intent);
+//            intent = new Intent(MainActivity.this, TelephoneInject.class);
+//            accessNextPage(intent);
             break;
         case MsgIds.OBSEVER_ID:
             intent = new Intent(MainActivity.this, Obsevera.class);

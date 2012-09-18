@@ -30,7 +30,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Transformation;
 import android.view.animation.TranslateAnimation;
 
-public class AnimateDrawables extends Activity {
+public class AnimateDrawables  extends Activity {
 	// 图像运动控制器
 	static Animation animation;
 

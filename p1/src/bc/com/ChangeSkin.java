@@ -45,7 +45,7 @@ public class ChangeSkin extends Activity {
         btn.setBackgroundDrawable(friendContext.getResources().getDrawable(R.drawable.back));
 
         AssetManager asset = getAssets();
-        Log.d("aa", "asset count is " + asset.getGlobalAssetCount());
+//        Log.d("aa", "asset count is " + asset.getGlobalAssetCount());
 
         try {
             String[] s = asset.list("image");
