@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:background="#e0000000">
+	<TextView android:id="@+id/text1"
+		android:layout_alignParentTop="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></TextView>
+	<ProgressBar android:id="@+id/progress_bar"
+		android:layout_alignParentBottom="true" android:layout_width="160dip"
+		android:layout_height="10dip" android:layout_marginBottom="20dip"
+		android:gravity="center" style="?android:attr/progressBarStyleHorizontal"></ProgressBar>
+
+	<SeekBar android:id="@+id/seek_bar" android:layout_above="@id/progress_bar"
+		android:layout_width="200dip" android:layout_height="10dip"
+		android:layout_marginBottom="100dip"
+		>
+	</SeekBar>
+</RelativeLayout>
+	

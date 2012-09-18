@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/book_tab1"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:layout_alignParentTop="true">
+	<ListView android:id="@+id/tab1_list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:divider="@drawable/divider1"
+		android:dividerHeight="1dip" />
+	<ListView android:id="@+id/tab2_list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:divider="@drawable/divider1"
+		android:dividerHeight="2dip" />
+	<ListView android:id="@+id/tab3_list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:divider="@drawable/divider1"
+		android:dividerHeight="2dip" />
+	<ListView android:id="@+id/tab4_list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:divider="@drawable/divider1"
+		android:dividerHeight="2dip" />
+	<ListView android:id="@+id/tab5_list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:divider="@drawable/divider1"
+		android:dividerHeight="2dip" />
+
+	
+</FrameLayout>

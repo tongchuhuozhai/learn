@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="120dip"
+	android:layout_height="40dip" android:id="@+id/gallery_adapter"
+	android:gravity="center">
+	<TextView android:id="@+id/a_text"
+		android:layout_height="40dip" android:layout_width="120dip"
+		android:singleLine="true" android:gravity="center" android:ellipsize="marquee"
+		android:textColor="#ffffff" />
+</LinearLayout>

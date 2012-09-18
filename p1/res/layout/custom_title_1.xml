@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="42dip"
+	android:id="@+id/title_bar" android:orientation="horizontal"
+	android:background="@drawable/cmcc_title_bg">
+	<ImageView android:id="@+id/left_text" android:background="@drawable/icon"
+		android:layout_width="30dip" android:layout_height="30dip"
+		android:layout_centerInParent="true" android:layout_alignParentLeft="true"
+		android:layout_marginRight="5dip" />
+
+	<ImageView android:id="@+id/back_icon" android:layout_width="wrap_content"
+		android:layout_centerInParent="true" android:clickable="true"
+		android:layout_alignParentRight="true" android:layout_height="wrap_content"
+		android:background="@drawable/icon" />
+	<TextView android:id="@+id/right_text_title"
+		android:layout_toLeftOf="@id/back_icon" android:layout_toRightOf="@id/left_text"
+		android:layout_centerInParent="true" android:gravity="center_vertical"
+		android:layout_width="fill_parent" android:layout_height="42dip"
+		android:singleLine="true" android:textSize="18dip" android:textStyle="normal" />
+</RelativeLayout>

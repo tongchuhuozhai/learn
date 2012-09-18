@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/tab1" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:isScrollContainer="true" android:clipChildren="true" >
+	<TabWidget android:id="@+id/tab11" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" >
+
+		<Button  android:layout_width="120dip"
+			android:layout_height="wrap_content" android:text="odk"></Button>
+		<Button  android:layout_width="120dip"
+			android:layout_height="wrap_content" android:text="odk"></Button>
+		<Button  android:layout_width="120dip"
+			android:layout_height="wrap_content" android:text="odk"></Button>
+		<Button  android:layout_width="120dip"
+			android:layout_height="wrap_content" android:text="odk"></Button>
+		<Button  android:layout_width="120dip"
+			android:layout_height="wrap_content" android:text="odk"></Button>
+		<Button  android:layout_width="120dip"
+			android:layout_height="wrap_content" android:text="odk"></Button>
+	</TabWidget>
+</TabHost>

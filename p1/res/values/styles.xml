@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme" parent="android:Theme" />
+	<style name="Theme.BookTab1">
+		<item name="android:windowTitleSize">40dip</item>
+		<item name="android:windowTitleBackgroundStyle">@style/Theme.WindowTitleBackground</item>
+	</style>
+	<style name="Theme.WindowTitleBackground">
+		<item name="android:background">@drawable/cmcc_title_bg</item>
+	</style>
+	<style name="Theme.Translucent" parent="android:style/Theme.Translucent">
+		<item name="android:windowBackground">@drawable/translucent_background</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorForeground">#fff</item>
+	</style>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:orientation="horizontal" android:background="#000000" >
+
+	<TextView android:id="@+id/list_id_id2" android:layout_width="fill_parent"
+		android:layout_alignParentLeft="true" android:layout_height="50dip"
+		android:gravity="center_vertical"
+		android:background="@drawable/back_selector_a"
+		>
+	</TextView>
+
+
+</RelativeLayout>

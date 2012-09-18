@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:gravity="center_horizontal">
+	<Button android:id="@+id/content_backpage" android:layout_width="138dip"
+		android:layout_height="38dip" android:background="@drawable/button_bg"
+		android:text="@string/content_back" android:textColor="@drawable/text_selector" />
+	<Button android:id="@+id/content_nextpage" android:layout_width="138dip"
+		android:layout_height="38dip" android:background="@drawable/button_bg"
+		android:text="@string/content_next" android:textColor="@drawable/text_selector"
+		android:layout_marginLeft="15dip" />
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:gravity="center_vertical" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:layout_marginBottom="5dip"
+		android:layout_marginTop="5dip" android:id="@+id/searchText">
+		<Button android:id="@+id/search_result_button"
+			android:layout_alignParentRight="true" android:layout_width="38dip"
+			android:layout_height="38dip" android:background="@drawable/search_button"
+			android:layout_marginLeft="10dip" android:layout_marginRight="8dip" />
+		<EditText android:id="@+id/search_result_text"
+			android:layout_toLeftOf="@+id/search_result_button"
+			android:imeOptions="actionDone" android:background="@drawable/shape_border_5"
+			android:layout_width="fill_parent" android:layout_height="38dip"
+			android:layout_marginLeft="10dip" android:textColor="#000000"
+			android:textColorHighlight="#FF9200" android:singleLine="true"
+			android:paddingLeft="5dip" />
+	</RelativeLayout>
+
+	<LinearLayout android:id="@+id/wordLayout"
+		android:paddingLeft="2dip" android:layout_marginBottom="2dip"
+		android:orientation="horizontal" android:layout_width="262dip"
+		android:singleLine="true" android:layout_height="wrap_content"
+		android:layout_below="@id/searchText" android:gravity="center_vertical" >
+	</LinearLayout>
+
+	<TabHost android:layout_width="fill_parent"
+		android:layout_height="120dip">
+
+	</TabHost>
+	<RelativeLayout android:id="@+id/v1"
+		android:layout_width="fill_parent" android:layout_height="60dip"
+		android:layout_alignParentBottom="true">
+		<Gallery android:id="@+id/gallery" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+	</RelativeLayout>
+</RelativeLayout>

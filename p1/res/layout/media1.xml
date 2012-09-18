@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="#00000000">
+
+	<SurfaceView android:id="@+id/playsurface"
+		android:layout_alignParentTop="true" android:focusable="true"
+		android:background="#00000f00" android:layout_width="fill_parent"
+		android:layout_height="266.7dip" android:layout_gravity="center">
+	</SurfaceView>
+
+	<ViewFlipper android:id="@+id/pinpu"
+		android:layout_alignParentTop="true" android:background="#00000000"
+		android:focusable="true" android:flipInterval="2000"
+		android:layout_width="fill_parent" android:layout_height="400dip"
+		android:layout_gravity="center" android:visibility="gone">
+	</ViewFlipper>
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@id/playsurface"
+		android:orientation="horizontal">
+		<TextView android:id="@+id/current_time"
+			android:layout_alignParentLeft="true" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="current" />
+		<SeekBar android:id="@+id/progress_bar" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_toRightOf="@id/current_time"
+			style="?android:attr/progressBarStyleHorizontal" 
+			
+			/>
+		<TextView android:id="@+id/total_time_a"
+			android:layout_alignParentRight="true" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="total" />
+	</RelativeLayout>
+</RelativeLayout>

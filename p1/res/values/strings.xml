@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">alarm0</string>
+	<string name="alarm">alarm</string>
+	<string name="alarm1">alarm1</string>
+	<string name="app_name">test</string>
+	<string name="notify"> NotificationManager notify</string>
+
+	<string name="media_memery_not_enough">内存不足!</string>
+	<string name="media_init_error">初始化设备出错!</string>
+	<string name="media_file_not_exisis">播放器库文件不存在!</string>
+	<string name="media_init_liu_fail">初始化流失败!</string>
+	<string name="media_init_net_error">网络连接失败!</string>
+	<string name="media_init_net_timeout">网络连接超时!</string>
+	<string name="media_no_quanxian">无网络连接权限!</string>
+	<string name="media_error_format">媒体格式错误!</string>
+	<string name="media_file_notsuport">文件格式不支持!</string>
+	<string name="media_error_unkown">未知错误!</string>
+
+	<string name="hw_openfailed">打开失败</string>
+	<string name="hw_not_support">媒体格式不支持</string>
+	<string name="hw_net_error">网络传输错误</string>
+	<string name="hw_net_timeout">网络传输超时</string>
+	<string name="hw_seek_failed">快进或快退失败</string>
+
+	<string name="contact_title">联系人</string>
+	<string name="no_contact">没有联系人</string>
+	<string name="contact_searching">通讯录查找中...</string>
+	<string name="select_contacts">请选择联系人</string>
+
+	<string name="content_back">上一节目</string>
+	<string name="content_next">下一节目</string>
+
+	<string name="dialogConfirm">确定</string>
+	<string name="dialogCanncel">取消</string>
+	<string name="huayan">华严宗</string>
+	<string name="resolver">数据提供者与接收者</string>
+	<string name="contact">通讯录</string>
+	<string name="gif_animate">gif动画</string>
+	<string name="player">播放器</string>
+	<string name="phy">哲学</string>
+	<string name="net1">网络</string>
+	<string name="index_page">主页</string>
+	<string name="g3_spinner">下拉框</string>
+	<string name="bitmap">位图</string>
+	<string name="sliding_tab">滑动解锁</string>
+	
+	<!-- 短信 -->
+	<string name="sms_title">短信</string>
+	<string name="process_title">进度条</string>
+	
+	<string name="control_process_title">代码控制布局</string>
+	<string name="list_item_color">列表项颜色</string>
+	<string name="preference_activity">PreferenceActivity</string>
+	<string name="wall_paper">壁纸</string>
+	<string name="bind_service">服务的存根与代理</string>
+	<string name="wake_lock">唤醒锁</string>
+	<string name="change_skin">换肤</string>
+	<string name="other_app">另一个应用</string>
+	<string name="layout_weight">layout_weight</string>
+	<string name="thread_test">线程</string>
+		<string name="md5">md5</string>
+			<string name="meta">元数据</string>
+	
+</resources>

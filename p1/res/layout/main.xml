@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:weightSum="1" android:orientation="vertical">
+	<LinearLayout android:orientation="vertical" android:id="@+id/loginbg"
+		android:gravity="bottom|center_horizontal" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<LinearLayout android:orientation="vertical"
+			android:layout_marginBottom="5dip" android:layout_width="286dip"
+			android:layout_height="120dip" android:layout_marginTop="290dip"
+			android:background="@drawable/login_back"
+			android:layout_centerVertical="true" android:gravity="bottom|center_horizontal">
+			<ProgressBar android:id="@+id/loginprogress"
+				android:indeterminate="true" android:indeterminateBehavior="repeat"
+				android:layout_width="60dip" android:visibility="visible"
+				android:layout_height="60dip" />
+			<TextView android:id="@+id/logintext"  android:text="loading...."
+				android:layout_marginTop="5dip" android:layout_centerHorizontal="true"
+				android:adjustViewBounds="true" android:layout_width="wrap_content"
+				android:layout_marginBottom="3dip" android:visibility="visible"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical"
+	>
+	<Button android:id="@+id/releae_partial_lock" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="release_parial_lock_acquire_full_lock" />
+	<Button android:id="@+id/releae_full_lock" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="release_pull_lock_acquire_partial_lock" />
+
+</LinearLayout>
