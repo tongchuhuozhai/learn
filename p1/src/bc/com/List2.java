@@ -13,55 +13,55 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class List2 extends BaseActivity {
-	ListView lv;
+    ListView lv;
 
-	Listennerm d;
-	private OnItemClickListener itemListener = new OnItemClickListener() {
+    Listennerm d;
+    private OnItemClickListener itemListener = new OnItemClickListener() {
 
-		@Override
-		public void onItemClick(AdapterView<?> convert, View arg1, int index,
-				long arg3) {
-			ListView s = (ListView) convert;
-			d.sendMessage(d.obtainMessage(2001));
+        @Override
+        public void onItemClick(AdapterView<?> convert, View arg1, int index,
+                long arg3) {
+            ListView s = (ListView) convert;
+            d.sendMessage(d.obtainMessage(2001));
 
-		}
-	};
+        }
+    };
 
-	private Listener1 listener = new Listener1() {
-		@Override
-		public void handleMessage(Message msg) {
-			switch (msg.what) {
-			case 2001:
-				Intent i = new Intent(List2.this, dd.class);
-				startActivityForResult(i, 0);
-				break;
-			default:
-				break;
-			}
-		}
-	};;;
+    private Listener1 listener = new Listener1() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+            case 2001:
+                Intent i = new Intent(List2.this, dd.class);
+                startActivityForResult(i, 0);
+                break;
+            default:
+                break;
+            }
+        }
+    };;;
 
-	@Override
-	public void onCreate(Bundle v) {
-		super.onCreate(v);
-		super.init(R.layout.list2);
+    @Override
+    public void onCreate(Bundle v) {
+        super.onCreate(v);
+        super.init(R.layout.list2);
 
-		setupView();
+        setupView();
 
-		// 获取消息处理器
-		d = ApplicationEntry.getListennerm();
-		d.setListener(listener );
-	}
+        // 获取消息处理器
+        d = ApplicationEntry.getListennerm();
+        d.setListener(listener);
+    }
 
-	private void setupView() {
-		List<String> adapterData = new ArrayList<String>();
-		adapterData.add("abcd");
-		adapterData.add("abcd");
-		adapterData.add("abcd");
-		ListAdapter1 adapter = new ListAdapter1(this, adapterData);
+    private void setupView() {
+        List<String> adapterData = new ArrayList<String>();
+        adapterData.add("abcd");
+        adapterData.add("abcd");
+        adapterData.add("abcd");
+        ListAdapter1 adapter = new ListAdapter1(this, adapterData);
 
-		lv = (ListView) findViewById(R.id.list2);
-		lv.setOnItemClickListener(itemListener);
-		lv.setAdapter(adapter);
-	}
+        lv = (ListView) findViewById(R.id.list2);
+        lv.setOnItemClickListener(itemListener);
+        lv.setAdapter(adapter);
+    }
 }

@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ComponentName;
@@ -44,7 +43,8 @@ public class MainActivity extends BaseActivity {
     private OnItemClickListener itemListener = new OnItemClickListener() {
 
         @Override
-        public void onItemClick(AdapterView<?> arg0, View arg1, int index, long arg3) {
+        public void onItemClick(AdapterView<?> arg0, View arg1, int index,
+                long arg3) {
             Message m = activityEntryList.get(index).msg;
             listennerm.sendMessage(m);
             logger.i("message is " + m.what);
@@ -64,18 +64,18 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.main_3);
 
         AssetManager asset = getAssets();
-//        Log.d("aa", "asset count is " + asset.getGlobalAssetCount());
-        
+        // Log.d("aa", "asset count is " + asset.getGlobalAssetCount());
+
         try {
             String[] s = asset.list("image");
-            for(int i=0; i<s.length; i++ )
+            for (int i = 0; i < s.length; i++)
                 Log.d("aaa", s[i]);
         } catch (IOException e) {
             Log.e("aaa", "error");
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        
+
         p = getIntent().getParcelableExtra(MsgIds.intentData);
         WindowManager.LayoutParams layouParams = getWindow().getAttributes();
 
@@ -92,11 +92,10 @@ public class MainActivity extends BaseActivity {
             listItemState = new boolean[listView.getCount()];
         }
 
-//        this.getResources().openRawResourceFd(com.android.internal.R.raw.fallbackring);
-//        Uri uri = Settings.System.DEFAULT_RINGTONE_URI;
-//        Ringtone r = RingtoneManager.getRingtone(this, uri);
-        
-        
+        // this.getResources().openRawResourceFd(com.android.internal.R.raw.fallbackring);
+        // Uri uri = Settings.System.DEFAULT_RINGTONE_URI;
+        // Ringtone r = RingtoneManager.getRingtone(this, uri);
+
     }
 
     MainListAdapter adapter;
@@ -146,7 +145,7 @@ public class MainActivity extends BaseActivity {
     ActivityEntity e29 = new ActivityEntity();
     ActivityEntity e30 = new ActivityEntity();
     ActivityEntity e31 = new ActivityEntity();
-    
+
     private void addActivity() {
         e.data = R.string.index_page;
         e1.data = R.string.phy;
@@ -180,7 +179,7 @@ public class MainActivity extends BaseActivity {
         e29.data = R.string.thread_test;
         e30.data = R.string.md5;
         e31.data = R.string.meta;
-        
+
         activityEntryList.add(e);
 
         activityEntryList.add(e1);
@@ -239,8 +238,6 @@ public class MainActivity extends BaseActivity {
         super.onResume();
 
     }
-    
-    
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -276,7 +273,6 @@ public class MainActivity extends BaseActivity {
         e25.msg = listennerm.obtainMessage(MsgIds.OBSEVER_ID);
         e26.msg = listennerm.obtainMessage(MsgIds.VM_DONW_ID);
         e27.msg = listennerm.obtainMessage(MsgIds.PARTNER_ID);
-        e28.msg = listennerm.obtainMessage(MsgIds.WEIGHT_ID);
         e29.msg = listennerm.obtainMessage(MsgIds.THREAD_ID);
         e30.msg = listennerm.obtainMessage(MsgIds.MD5_ID);
         e31.msg = listennerm.obtainMessage(MsgIds.META_ID);
@@ -287,7 +283,8 @@ public class MainActivity extends BaseActivity {
         logger.i("onDestroy ------ enter");
         super.onDestroy();
 
-        android.os.Process.sendSignal(android.os.Process.myPid(), android.os.Process.SIGNAL_KILL);
+        android.os.Process.sendSignal(android.os.Process.myPid(),
+                android.os.Process.SIGNAL_KILL);
     }
 
     class ActivityEntity {
@@ -298,29 +295,47 @@ public class MainActivity extends BaseActivity {
     @Override
     protected Dialog onCreateDialog(int id, Bundle args) {
         // TODO Auto-generated method stub
-        final View v = LayoutInflater.from(context).inflate(R.layout.passwd1, null);
-        return new AlertDialog.Builder(this).setTitle("passwd").setView(v).setIcon(android.R.drawable.ic_dialog_alert).setMessage("message").setPositiveButton(android.R.string.ok,
-                new DialogInterface.OnClickListener() {
+        final View v = LayoutInflater.from(context).inflate(R.layout.passwd1,
+                null);
+        return new AlertDialog.Builder(this)
+                .setTitle("passwd")
+                .setView(v)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setMessage("message")
+                .setPositiveButton(android.R.string.ok,
+                        new DialogInterface.OnClickListener() {
 
-                    @Override
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        // TODO Auto-generated method stub
-                        EditText et = (EditText) v.findViewById(R.id.pass_wd);
-                        Log.d("sfkj", " " + et.getText());
-                        if (et.getText().toString().equals("a")) {
-                            intent = new Intent(MainActivity.this, BookTab.class);
-                            intent.putExtra("title", R.string.huayan);
-                            intent.putExtra("tab1", "/data/data/" + applicationName + "/res1/huayan.xml");
-                            intent.putExtra("tab2", "/data/data/" + applicationName + "/res1/lengjia.xml");
-                            intent.putExtra("tab3", "/data/data/" + applicationName + "/res1/boruojing.xml");
-                            intent.putExtra("tab4", "/data/data/" + applicationName + "/res1/jimi.xml");
-                            intent.putExtra("tab5", "/data/data/" + applicationName + "/res1/lifa.xml");
-                            et.getText().clear();
-                            accessNextPage(intent);
-                        }
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+                                // TODO Auto-generated method stub
+                                EditText et = (EditText) v
+                                        .findViewById(R.id.pass_wd);
+                                Log.d("sfkj", " " + et.getText());
+                                if (et.getText().toString().equals("a")) {
+                                    intent = new Intent(MainActivity.this,
+                                            BookTab.class);
+                                    intent.putExtra("title", R.string.huayan);
+                                    intent.putExtra("tab1", "/data/data/"
+                                            + applicationName
+                                            + "/res1/huayan.xml");
+                                    intent.putExtra("tab2", "/data/data/"
+                                            + applicationName
+                                            + "/res1/lengjia.xml");
+                                    intent.putExtra("tab3", "/data/data/"
+                                            + applicationName
+                                            + "/res1/boruojing.xml");
+                                    intent.putExtra("tab4", "/data/data/"
+                                            + applicationName
+                                            + "/res1/jimi.xml");
+                                    intent.putExtra("tab5", "/data/data/"
+                                            + applicationName
+                                            + "/res1/lifa.xml");
+                                    et.getText().clear();
+                                    accessNextPage(intent);
+                                }
 
-                    }
-                }).create();
+                            }
+                        }).create();
     }
 
     @Override
@@ -338,7 +353,7 @@ public class MainActivity extends BaseActivity {
             }
             Ringtone r = RingtoneManager.getRingtone(this, a);
             r.play();
-            
+
             intent = new Intent(MainActivity.this, IndexActivity.class);
 
             accessNextPage(intent);
@@ -392,16 +407,16 @@ public class MainActivity extends BaseActivity {
             accessNextPage(intent);
             break;
         case MsgIds.SLIDINGTAB_ID:
-//            intent = new Intent(MainActivity.this, Sliding1.class);
-//            accessNextPage(intent);
+            // intent = new Intent(MainActivity.this, Sliding1.class);
+            // accessNextPage(intent);
             break;
         case MsgIds.PREFERENCE_ID:
             intent = new Intent(MainActivity.this, Prefence1.class);
             accessNextPage(intent);
             break;
         case MsgIds.WALL_PAPER_ID:
-//            intent = new Intent(MainActivity.this, WallPaper1.class);
-//            accessNextPage(intent);
+            // intent = new Intent(MainActivity.this, WallPaper1.class);
+            // accessNextPage(intent);
             break;
         case MsgIds.COLOR_ID:
             intent = new Intent(MainActivity.this, Colorsa.class);
@@ -436,8 +451,8 @@ public class MainActivity extends BaseActivity {
             accessNextPage(intent);
             break;
         case MsgIds.TELEPHONE_ID:
-//            intent = new Intent(MainActivity.this, TelephoneInject.class);
-//            accessNextPage(intent);
+            // intent = new Intent(MainActivity.this, TelephoneInject.class);
+            // accessNextPage(intent);
             break;
         case MsgIds.OBSEVER_ID:
             intent = new Intent(MainActivity.this, Obsevera.class);
@@ -451,10 +466,6 @@ public class MainActivity extends BaseActivity {
             intent = new Intent("c");
             ComponentName cna = new ComponentName("aa.com", "aa.com.aa");
             intent.setComponent(cna);
-            accessNextPage(intent);
-            break;
-        case MsgIds.WEIGHT_ID:
-            intent = new Intent(MainActivity.this, abc.class);
             accessNextPage(intent);
             break;
         case MsgIds.THREAD_ID:
@@ -482,7 +493,6 @@ public class MainActivity extends BaseActivity {
         Log.d("aaa", "+++onStop is callsed ");
     }
 
-    
     private void accessNextPage(Intent intent) {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Controller1.getConller1().removeListener(this);
@@ -521,7 +531,8 @@ public class MainActivity extends BaseActivity {
             ViewHolder vh = new ViewHolder();
             // 获取视图
             if (convertView == null) {
-                convertView = LayoutInflater.from(c).inflate(R.layout.list_a, null);
+                convertView = LayoutInflater.from(c).inflate(R.layout.list_a,
+                        null);
                 vh.tv = (TextView) convertView.findViewById(R.id.list_id_id2);
                 convertView.setTag(vh);
             } else {

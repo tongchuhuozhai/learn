@@ -29,77 +29,77 @@ import android.view.WindowManager;
 
 public class BitmapActivity extends BaseActivity {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(new SampleView(this));
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(new SampleView(this));
 
-		Log.d("tag1", "AlphaBitmap begin");
-	}
+        Log.d("tag1", "AlphaBitmap begin");
+    }
 
-	// 按键响应
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent msg) {
-		Log.d("tag1", "onKeyDown1");
+    // 按键响应
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent msg) {
+        Log.d("tag1", "onKeyDown1");
 
-		if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
-			Log.d("tag1", "KEYCODE_DPAD_UP");
-			return (true);
-		} else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
+        if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
+            Log.d("tag1", "KEYCODE_DPAD_UP");
+            return (true);
+        } else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
 
-			finish();
-			// 不明: 结束应用程序
-			// ActivityManager activityManager = (ActivityManager) this
-			// .getSystemService(Context.ACTIVITY_SERVICE);
-			// activityManager.killBackgroundProcesses("bc.com.ApplicationEntry");
-			// Log.d("application tag", "application exit");
+            finish();
+            // 不明: 结束应用程序
+            // ActivityManager activityManager = (ActivityManager) this
+            // .getSystemService(Context.ACTIVITY_SERVICE);
+            // activityManager.killBackgroundProcesses("bc.com.ApplicationEntry");
+            // Log.d("application tag", "application exit");
 
-			return (true);
-		}
-		return super.onKeyDown(keyCode, msg);
-	}
+            return (true);
+        }
+        return super.onKeyDown(keyCode, msg);
+    }
 
-	class SampleView extends View {
+    class SampleView extends View {
 
-		public SampleView(Context context) {
-			super(context);
-			// TODO Auto-generated constructor stub
-		}
+        public SampleView(Context context) {
+            super(context);
+            // TODO Auto-generated constructor stub
+        }
 
-		@Override
-		protected void onDraw(Canvas canvas) {
-			canvas.drawColor(Color.GRAY);
+        @Override
+        protected void onDraw(Canvas canvas) {
+            canvas.drawColor(Color.GRAY);
 
-			// 创建一个画笔
-			Paint p = new Paint();
-			p.setColor(Color.BLUE);
-			// 使边缘圆滑
-			p.setAntiAlias(true);
+            // 创建一个画笔
+            Paint p = new Paint();
+            p.setColor(Color.BLUE);
+            // 使边缘圆滑
+            p.setAntiAlias(true);
 
-			// 在画布上用画笔画图
-			canvas.drawCircle(100, 100, 30, p);
+            // 在画布上用画笔画图
+            canvas.drawCircle(100, 100, 30, p);
 
-			p.setColor(Color.GREEN);
-			canvas.drawCircle(100, 200, 30, p);
-		}
+            p.setColor(Color.GREEN);
+            canvas.drawCircle(100, 200, 30, p);
+        }
 
-		@Override
-		public boolean onKeyDown(int keyCode, KeyEvent msg) {
-			Log.d("tag1", "onKeyDown1");
+        @Override
+        public boolean onKeyDown(int keyCode, KeyEvent msg) {
+            Log.d("tag1", "onKeyDown1");
 
-			if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
-				Log.d("tag1", "KEYCODE_DPAD_UP");
+            if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
+                Log.d("tag1", "KEYCODE_DPAD_UP");
 
-				// Intent i = new Intent(KeyPad1.this, IndexActity.class);
-				// startActivityForResult(i, 0);
+                // Intent i = new Intent(KeyPad1.this, IndexActity.class);
+                // startActivityForResult(i, 0);
 
-				return (true);
+                return (true);
 
-			}
+            }
 
-			Log.d("tag1", "onKeyDown");
-			return super.onKeyDown(keyCode, msg);
-		}
-	}
+            Log.d("tag1", "onKeyDown");
+            return super.onKeyDown(keyCode, msg);
+        }
+    }
 
 }
