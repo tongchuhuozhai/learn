@@ -1,0 +1,11 @@
+把数据文件放到手机上的应用程序目录:　
+adb -d push /home/lg/github/learn/p1/res1 /data/data/bc.com/res1/
+
+Ｅclipse为与android原码风格一致,　将Windows->Preferences->代码风格的缩进设置
+TapPolicy 为　spacesOnly
+Intendation 为　０
+ＴabSize 为　０
+
+
+
+
