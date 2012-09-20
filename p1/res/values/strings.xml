@@ -59,7 +59,8 @@
 	<string name="other_app">另一个应用</string>
 	<string name="layout_weight">layout_weight</string>
 	<string name="thread_test">线程</string>
-		<string name="md5">md5</string>
-			<string name="meta">元数据</string>
+	<string name="md5">md5</string>
+	<string name="meta">元数据</string>
+    <string name="actionbar1">导航栏</string>
 	
 </resources>

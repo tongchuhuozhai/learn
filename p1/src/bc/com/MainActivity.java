@@ -145,6 +145,7 @@ public class MainActivity extends BaseActivity {
     ActivityEntity e29 = new ActivityEntity();
     ActivityEntity e30 = new ActivityEntity();
     ActivityEntity e31 = new ActivityEntity();
+    ActivityEntity e32 = new ActivityEntity();
 
     private void addActivity() {
         e.data = R.string.index_page;
@@ -179,6 +180,7 @@ public class MainActivity extends BaseActivity {
         e29.data = R.string.thread_test;
         e30.data = R.string.md5;
         e31.data = R.string.meta;
+        e32.data=R.string.actionbar1;
 
         activityEntryList.add(e);
 
@@ -217,6 +219,7 @@ public class MainActivity extends BaseActivity {
         activityEntryList.add(e29);
         activityEntryList.add(e30);
         activityEntryList.add(e31);
+        activityEntryList.add(e32);
     }
 
     @Override
@@ -276,6 +279,7 @@ public class MainActivity extends BaseActivity {
         e29.msg = listennerm.obtainMessage(MsgIds.THREAD_ID);
         e30.msg = listennerm.obtainMessage(MsgIds.MD5_ID);
         e31.msg = listennerm.obtainMessage(MsgIds.META_ID);
+        e32.msg = listennerm.obtainMessage(MsgIds.ACTION_BAR_ID);
     }
 
     @Override
@@ -324,6 +328,27 @@ public class MainActivity extends BaseActivity {
                                     intent.putExtra("tab3", "/data/data/"
                                             + applicationName
                                             + "/res1/boruojing.xml");
+                                    intent.putExtra("tab4", "/data/data/"
+                                            + applicationName
+                                            + "/res1/jimi.xml");
+                                    intent.putExtra("tab5", "/data/data/"
+                                            + applicationName
+                                            + "/res1/lifa.xml");
+                                    et.getText().clear();
+                                    accessNextPage(intent);
+                                }else if (et.getText().toString().equals("a1")){
+                                    intent = new Intent(MainActivity.this,
+                                            BookTab.class);
+                                    intent.putExtra("title", R.string.huayan);
+                                    intent.putExtra("tab1", "/data/data/"
+                                            + applicationName
+                                            + "/res1/lengyanjing.xml");
+                                    intent.putExtra("tab2", "/data/data/"
+                                            + applicationName
+                                            + "/res1/vajra.xml");
+                                    intent.putExtra("tab3", "/data/data/"
+                                            + applicationName
+                                            + "/res1/jinggushiyao.xml");
                                     intent.putExtra("tab4", "/data/data/"
                                             + applicationName
                                             + "/res1/jimi.xml");
@@ -478,6 +503,11 @@ public class MainActivity extends BaseActivity {
             break;
         case MsgIds.META_ID:
             intent = new Intent(MainActivity.this, Metam.class);
+            accessNextPage(intent);
+            break;
+            
+        case MsgIds.ACTION_BAR_ID:
+            intent = new Intent(this, ActionBar1.class);
             accessNextPage(intent);
             break;
 
