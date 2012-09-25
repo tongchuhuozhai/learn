@@ -222,8 +222,10 @@
 
         <activity android:name=".Metam" >
         </activity>
+        <activity android:name=".ActionBar1" >
+        </activity>
         
-         <activity android:name=".ActionBar1" >
+        <activity android:name=".FragmentActivitiy" >
         </activity>
 
         <meta-data

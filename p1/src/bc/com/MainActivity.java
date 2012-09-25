@@ -146,6 +146,7 @@ public class MainActivity extends BaseActivity {
     ActivityEntity e30 = new ActivityEntity();
     ActivityEntity e31 = new ActivityEntity();
     ActivityEntity e32 = new ActivityEntity();
+    ActivityEntity e33 = new ActivityEntity();
 
     private void addActivity() {
         e.data = R.string.index_page;
@@ -181,6 +182,7 @@ public class MainActivity extends BaseActivity {
         e30.data = R.string.md5;
         e31.data = R.string.meta;
         e32.data=R.string.actionbar1;
+        e33.data=R.string.fragement;
 
         activityEntryList.add(e);
 
@@ -220,6 +222,7 @@ public class MainActivity extends BaseActivity {
         activityEntryList.add(e30);
         activityEntryList.add(e31);
         activityEntryList.add(e32);
+        activityEntryList.add(e33);
     }
 
     @Override
@@ -280,6 +283,7 @@ public class MainActivity extends BaseActivity {
         e30.msg = listennerm.obtainMessage(MsgIds.MD5_ID);
         e31.msg = listennerm.obtainMessage(MsgIds.META_ID);
         e32.msg = listennerm.obtainMessage(MsgIds.ACTION_BAR_ID);
+        e33.msg = listennerm.obtainMessage(MsgIds.FRAGMENT_ID);
     }
 
     @Override
@@ -508,6 +512,10 @@ public class MainActivity extends BaseActivity {
             
         case MsgIds.ACTION_BAR_ID:
             intent = new Intent(this, ActionBar1.class);
+            accessNextPage(intent);
+            break;
+        case MsgIds.FRAGMENT_ID:
+            intent = new Intent(this, FragmentActivitiy.class);
             accessNextPage(intent);
             break;
 

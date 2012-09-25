@@ -62,5 +62,6 @@
 	<string name="md5">md5</string>
 	<string name="meta">元数据</string>
     <string name="actionbar1">导航栏</string>
+     <string name="fragement">fragement</string>
 	
 </resources>
