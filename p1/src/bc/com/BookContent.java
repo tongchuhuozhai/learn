@@ -32,7 +32,12 @@ public class BookContent extends Activity {
                     }
                 });
         setupView();
+        
 
+    }
+    
+    @Override
+    public void onBackPressed() {
     }
 
     private void setupView() {
@@ -40,4 +45,6 @@ public class BookContent extends Activity {
         TextView v = (TextView) findViewById(R.id.content);
         v.setText(intent.getStringExtra("content"));
     }
+    
+    
 }

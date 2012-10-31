@@ -63,5 +63,16 @@
 	<string name="meta">元数据</string>
     <string name="actionbar1">导航栏</string>
      <string name="fragement">fragement</string>
+     <string name="drag_dialog">类似状态栏的整体拖动</string>
+     <string name="horizontal_vertical_dialog">横竖屏切换对话框</string>
+     <string name="sdcard_file_monitor">sd卡文件监听</string>
+     <string name="phone_inject">电话拦截</string>
+     
+     <string name="browse_pictures">浏览图片</string>
+     <string name="uri_test">Uri测试</string>
 	
+     <string name="sim_insert">向sim卡存联系人</string>
+     
+     <string name="start_service">启动服务</string>
+     <string name="color_set">颜色设置</string>
 </resources>

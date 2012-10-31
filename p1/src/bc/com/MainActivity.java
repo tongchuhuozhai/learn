@@ -147,6 +147,7 @@ public class MainActivity extends BaseActivity {
     ActivityEntity e31 = new ActivityEntity();
     ActivityEntity e32 = new ActivityEntity();
     ActivityEntity e33 = new ActivityEntity();
+    ActivityEntity e34 = new ActivityEntity();
 
     private void addActivity() {
         e.data = R.string.index_page;
@@ -164,18 +165,17 @@ public class MainActivity extends BaseActivity {
         e13.data = R.string.sliding_tab;
         e14.data = R.string.preference_activity;
         e15.data = R.string.wall_paper;
-        e16.data = R.string.wall_paper;
-        e17.data = R.string.wall_paper;
-        e18.data = R.string.wall_paper;
-        e18.data = R.string.wall_paper;
+        e16.data = R.string.color_set;
+        e17.data = R.string.start_service;
+        e18.data = R.string.sim_insert;
         e19.data = R.string.bind_service;
         e20.data = R.string.wake_lock;
-        e21.data = R.string.wake_lock;
-        e22.data = R.string.wake_lock;
+        e21.data = R.string.uri_test;
+        e22.data = R.string.browse_pictures;
         e23.data = R.string.change_skin;
-        e24.data = R.string.change_skin;
-        e25.data = R.string.change_skin;
-        e26.data = R.string.change_skin;
+        e24.data = R.string.phone_inject;
+        e25.data = R.string.sdcard_file_monitor;
+        e26.data = R.string.horizontal_vertical_dialog;
         e27.data = R.string.other_app;
         e28.data = R.string.layout_weight;
         e29.data = R.string.thread_test;
@@ -183,6 +183,7 @@ public class MainActivity extends BaseActivity {
         e31.data = R.string.meta;
         e32.data=R.string.actionbar1;
         e33.data=R.string.fragement;
+        e34.data=R.string.drag_dialog;
 
         activityEntryList.add(e);
 
@@ -223,6 +224,7 @@ public class MainActivity extends BaseActivity {
         activityEntryList.add(e31);
         activityEntryList.add(e32);
         activityEntryList.add(e33);
+        activityEntryList.add(e34);
     }
 
     @Override
@@ -284,6 +286,7 @@ public class MainActivity extends BaseActivity {
         e31.msg = listennerm.obtainMessage(MsgIds.META_ID);
         e32.msg = listennerm.obtainMessage(MsgIds.ACTION_BAR_ID);
         e33.msg = listennerm.obtainMessage(MsgIds.FRAGMENT_ID);
+        e34.msg = listennerm.obtainMessage(MsgIds.DRAG_DIALOG);
     }
 
     @Override
@@ -516,6 +519,11 @@ public class MainActivity extends BaseActivity {
             break;
         case MsgIds.FRAGMENT_ID:
             intent = new Intent(this, FragmentActivitiy.class);
+            accessNextPage(intent);
+            break;
+
+        case MsgIds.DRAG_DIALOG:
+            intent = new Intent(this, DragDialogActivity.class);
             accessNextPage(intent);
             break;
 

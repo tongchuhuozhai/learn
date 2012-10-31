@@ -227,6 +227,9 @@
         
         <activity android:name=".FragmentActivitiy" >
         </activity>
+        
+        <activity android:name=".DragDialogActivity" >
+        </activity>
 
         <meta-data
             android:name="foo"
@@ -243,6 +246,7 @@
             </intent-filter>
         </activity>
 
+        
         <service
             android:name=".FileModificationService"
             android:enabled="true" >

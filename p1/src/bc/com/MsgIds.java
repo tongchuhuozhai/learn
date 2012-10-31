@@ -42,6 +42,7 @@ public class MsgIds {
 	public static final int META_ID = MD5_ID + 1;
         public static final int ACTION_BAR_ID = META_ID + 1;
         public static final int FRAGMENT_ID = ACTION_BAR_ID + 1;
+        public static final int DRAG_DIALOG = FRAGMENT_ID + 1;
 	
 	//播放器
 	public static final int PLAY_TIME_ID = CONTROL_LAYOUT_ID + 1;
